@@ -1,2 +1,2 @@
 # java
-my java code
+Repository for my java practice as I am learning java
