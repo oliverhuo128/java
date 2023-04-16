@@ -1,11 +1,11 @@
- /*
+/*
        Try This 4-1
        Convert the help system from Try This 3-3 into
        a Help class.
-   */
+*/
 
   class Help {
-    
+
     void helpOn(int what) {
       switch(what) {
         case '1':
@@ -64,27 +64,27 @@
     boolean isValid(int ch) {
         if(ch < '1' | ch > '7' & ch != 'q') return false;
         else return true;
-        } 
+    } 
 }
 
 
 class HelpClassDemo {
 
-      public static void main(String[] args)
-        throws java.io.IOException {
+    public static void main(String[] args)
+    throws java.io.IOException {
         
         char choice, ignore;
         Help hlpobj = new Help();
         
         for(;;) {
             do {
-                hlpobj.showMenu();
 
+                hlpobj.showMenu();
                 choice = (char) System.in.read();
 
                 do {
                     ignore = (char) System.in.read();
-                    } while(ignore != '\n');
+                } while(ignore != '\n');
 
             } while( !hlpobj.isValid(choice) );
           
@@ -94,4 +94,5 @@ class HelpClassDemo {
           
           hlpobj.helpOn(choice);
         }
-} }
+    }
+}
